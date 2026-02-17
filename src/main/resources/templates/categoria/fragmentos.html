@@ -180,4 +180,38 @@
         </div>
     </div>
 </section>
+<!-- 4 fragmento que se utiliza para confirmar que se desea eliminar una categoria -->
+<section th:fragment="confirmarEliminar">
+    <div class="modal fade" 
+         id="confirmModal" 
+         tabindex="-1" 
+         aria-labelledby="modalLabel" 
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-animation">
+            <div class="modal-content animate-slide-up">
+                <form th:action="@{/categoria/eliminar}" th:object="${categoria}" method="post">
+                    <input type="hidden" name="idCategoria" id="modalId"/>
+                    <div class="modal-header bg-warning text-white">
+                        <h5 class="modal-title" id="modalLabel">
+                            <i class="fa-solid fa-circle-radiation"></i> [[#{accion.confirmar}]]
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>[[#{accion.confirmar.texto1}]] <span id="modalDescripcion"></span>?</p>
+                        <h6>[[#{accion.confirmar.texto2}]]</h6>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger">
+                            <i class="fa-solid fa-trash"></i> [[#{accion.eliminar}]]
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            <i class="fa-solid fa-xmark"></i> [[#{accion.cerrar}]]
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 

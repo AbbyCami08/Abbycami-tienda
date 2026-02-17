@@ -1,6 +1,8 @@
 com\techShop\tienda\repository\CategoriaRepository.class
 com\techShop\tienda\ProjectConfig.class
 com\techShop\tienda\domain\Categoria.class
+com\techShop\tienda\StorageConfig.class
 com\techShop\tienda\controller\CategoriaController.class
+com\techShop\tienda\service\FirebaseStorageService.class
 com\techShop\tienda\service\CategoriaService.class
 com\techShop\tienda\TiendaApplication.class
