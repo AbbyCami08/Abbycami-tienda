@@ -1,6 +1,7 @@
 com\techShop\tienda\repository\CategoriaRepository.class
 com\techShop\tienda\domain\Producto.class
 com\techShop\tienda\service\ProductoService.class
+com\techShop\tienda\controller\IndexController.class
 com\techShop\tienda\ProjectConfig.class
 com\techShop\tienda\controller\ProductoController.class
 com\techShop\tienda\domain\Categoria.class
