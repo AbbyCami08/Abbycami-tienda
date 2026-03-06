@@ -7,6 +7,7 @@ com\techShop\tienda\controller\ProductoController.class
 com\techShop\tienda\domain\Categoria.class
 com\techShop\tienda\StorageConfig.class
 com\techShop\tienda\controller\CategoriaController.class
+com\techShop\tienda\controller\ConsultaController.class
 com\techShop\tienda\repository\ProductoRepository.class
 com\techShop\tienda\service\FirebaseStorageService.class
 com\techShop\tienda\service\CategoriaService.class
