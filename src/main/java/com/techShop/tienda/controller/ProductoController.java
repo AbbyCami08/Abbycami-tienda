@@ -88,4 +88,14 @@ public class ProductoController {
         model.addAttribute("categorias", categorias);
         return "/producto/modifica";
     }
+
+    @GetMapping("/buscar")
+    public String buscarPorDescripcion(@RequestParam String descripcion, Model model) {
+        var productos = productoService.buscarPorDescripcion(descripcion);
+        model.addAttribute("productos", productos);
+        model.addAttribute("totalProductos", productos.size());
+        var categorias = categoriaService.getCategorias(true);
+        model.addAttribute("categorias", categorias);
+        return "/consultas/listado";
+    }
 }
