@@ -1,10 +1,12 @@
-com\techShop\tienda\repository\CategoriaRepository.class
+com\techShop\tienda\domain\Usuario.class
+com\techShop\tienda\service\UsuarioDetailsService.class
 com\techShop\tienda\domain\Producto.class
 com\techShop\tienda\service\ProductoService.class
-com\techShop\tienda\controller\IndexController.class
 com\techShop\tienda\ProjectConfig.class
 com\techShop\tienda\controller\ProductoController.class
 com\techShop\tienda\domain\Categoria.class
+com\techShop\tienda\domain\Rol.class
+com\techShop\tienda\domain\Ruta.class
 com\techShop\tienda\StorageConfig.class
 com\techShop\tienda\controller\CategoriaController.class
 com\techShop\tienda\controller\ConsultaController.class
@@ -12,3 +14,9 @@ com\techShop\tienda\repository\ProductoRepository.class
 com\techShop\tienda\service\FirebaseStorageService.class
 com\techShop\tienda\service\CategoriaService.class
 com\techShop\tienda\TiendaApplication.class
+com\techShop\tienda\repository\CategoriaRepository.class
+com\techShop\tienda\repository\RutaRepository.class
+com\techShop\tienda\service\RutaService.class
+com\techShop\tienda\controller\IndexController.class
+com\techShop\tienda\SecurityConfig.class
+com\techShop\tienda\repository\UsuarioRepository.class

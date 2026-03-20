@@ -24,3 +24,4 @@ hs_err_pid*
 replay_pid*
 /src/main/resources/firebase/techshop-b812d-firebase-adminsdk-fbsvc-46485c78e8.json
 /src/main/resources/firebase/
+/target/
