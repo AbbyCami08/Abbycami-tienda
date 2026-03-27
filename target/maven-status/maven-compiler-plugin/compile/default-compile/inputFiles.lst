@@ -2,6 +2,8 @@ C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tiend
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\controller\ConsultaController.java
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\controller\IndexController.java
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\controller\ProductoController.java
+C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\controller\RegistroController.java
+C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\controller\UsuarioController.java
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\domain\Categoria.java
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\domain\Producto.java
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\domain\Rol.java
@@ -10,13 +12,17 @@ C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tiend
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\ProjectConfig.java
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\repository\CategoriaRepository.java
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\repository\ProductoRepository.java
+C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\repository\RolRepository.java
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\repository\RutaRepository.java
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\repository\UsuarioRepository.java
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\SecurityConfig.java
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\service\CategoriaService.java
+C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\service\CorreoService.java
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\service\FirebaseStorageService.java
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\service\ProductoService.java
+C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\service\RegistroService.java
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\service\RutaService.java
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\service\UsuarioDetailsService.java
+C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\service\UsuarioService.java
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\StorageConfig.java
 C:\Users\abbyc\Documents\GitHub\AbbyCami-tienda\src\main\java\com\techShop\tienda\TiendaApplication.java
