@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org"
+      xmlns:th="http://www.thymeleaf.org"      
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
-
-    <!-- Fragmento #1 que irá en el head de todas las páginas, así se incluye todo lo necesario de configuración-->
     <head th:fragment="head">
         <title>TechShop</title>
         <meta charset="UTF-8"/>
@@ -18,12 +16,11 @@
         <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
         <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>    
         <link th:href="@{/css/estilos.css}" rel="stylesheet"/>
+        <meta name="_csrf" th:content="${_csrf.token}"/>
+        <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
     </head>
     <body>
-
-
-        <!-- Fragmento #2  define el encabezado de las páginas, en concreto el menú y enlaces rápidos -->
-        <header th:fragment="header" class="header">
+        <header th:fragment="header" class="header d-print-none">
             <nav class="navbar navbar-expand-sm p-0">
                 <div class="container">                    
                     <a th:href="@{/}" class="navbar-brand">[[#{aplicacion.titulo}]]</a>
@@ -35,19 +32,19 @@
                             <li class="nav-item px-2"><a class="nav-link" th:href="@{/categoria/listado}">[[#{plantilla.categorias}]]</a></li>
                             <li class="nav-item px-2"><a class="nav-link" th:href="@{/producto/listado}">[[#{plantilla.productos}]]</a></li>
                             <li class="nav-item px-2"><a class="nav-link" th:href="@{/consultas/listado}">[[#{plantilla.consultas}]]</a></li>                                
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown" sec:authorize="hasRole('ROLE_ADMIN')">
                                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
                                     [[#{plantilla.admin}]]</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" th:href="@{/usuario/listado}">[[#{plantilla.usuarios}]]</a></li>                                    
-                                    <li class="submenu submenu-md dropend" sec:authorize="hasRole('ROLE_ADMIN')">
+                                    <li class="submenu submenu-md dropend">
                                         <a class="dropdown-item dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
                                            onclick="event.stopPropagation();">
                                             [[#{plantilla.seguridad}]]
                                         </a>
                                         <ul class="dropdown-menu">                                            
                                             <li><a class="dropdown-item" th:href="@{/role/listado}">[[#{plantilla.troles}]]</a></li>
-                                            <li><a class="dropdown-item" th:href="@{/usuario_rol/mantenimiento}">[[#{plantilla.permisos}]]</a></li>
+                                            <li><a class="dropdown-item" th:href="@{/usuario_role/asignar}">[[#{plantilla.permisos}]]</a></li>
                                             <li><a class="dropdown-item" th:href="@{/ruta/listado}">[[#{plantilla.rutas}]]</a></li>
                                         </ul>
                                     </li>
@@ -68,7 +65,7 @@
                             </li>
                         </ul>
                         <div id="resultBlock">
-                        </div>         
+                        </div>
                         <ul class="navbar-nav" sec:authorize="!isAuthenticated()">
                             <li class="nav-item">
                                 <a class="nav-link" th:href="@{/login}">
@@ -80,8 +77,9 @@
                         <ul class="navbar-nav" sec:authorize="isAuthenticated()">
                             <li class="nav-item my-auto">
                                 <a class="nav-link">
-                                    <img th:src="@{${session.imagenUsuario}}"
+                                    <img th:src="@{${session.imagenUsuario}}" 
                                          alt="your image" height="40" class="rounded-circle"/>
+
                                     <span sec:authentication="name" class="ms-1"></span>
                                 </a>
                             </li>
@@ -94,7 +92,6 @@
                                 </form>
                             </li>
                         </ul>
-
                     </div>
                 </div>
             </nav>
@@ -109,12 +106,10 @@
             </section>
         </header>
 
-        <!-- Fragmento #3  define el footer de las páginas, aparte de esto se podria incluir enlaces a redes socilaes y demás -->
-        <footer th:fragment="footer" class="p-2 mt-5 bg-info text-white">
+        <footer th:fragment="footer" class="p-2 mt-5 bg-info text-white d-print-none">
             <p class="lead text-center">[[#{plantilla.derechos}]] &COPY;</p>
         </footer>
 
-        <!-- Fragmentos #4 define una ventana tipo Toast para mostrar mensajes al usuario -->
         <section th:fragment="mostrarToast">
             <div aria-live="polite" aria-atomic="true" 
                  class="position-fixed top-50 start-50 translate-middle" style="z-index: 1080;">                
@@ -140,7 +135,7 @@
                      aria-atomic="true"
                      data-bs-autohide="true">
                     <div class="toast-header text-white bg-success">
-                        <i class="fa-solid fa-square-check"></i> <strong class=me-auto> [[#{atencion}]]</strong>
+                        <i class="fa-solid fa-square-check"></i> <strong clas=me-auto> [[#{atencion}]]</strong>
                     </div>
                     <div class="toast-body">
                         <p>[[${todoOk}]]</p>
@@ -152,5 +147,6 @@
                 </div>
             </div>
         </section>
-    </body> 
+
+    </body>
 </html>
